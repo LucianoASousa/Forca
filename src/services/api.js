@@ -13,10 +13,14 @@ export async function getWord(){
 
 export async function getDefinition(word){
   const response = await api.get(`/word/${word}`);
-  const definition = response.data[0].xml.split("<def>")[1].split("</def>")[0];
+  let definition = response.data[0].xml.split("<def>")[1].split("</def>")[0];
+  console.log(definition);
 
-  if(definition.split("").includes("_")){
-    return `Relativo à ${definition.split("_")[1].split("_")[0]}.`;
+  if(definition.split("<cit")[1] !== undefined){
+    definition = await definition.split("<cit")[1].split("</cit>")[0];
+  }
+  if(definition.split("<term>")[0] !== undefined){
+    definition = await definition.split("<term>")[0].split("</term>")[0];
   }
 
   return await definition;
