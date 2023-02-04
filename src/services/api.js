@@ -14,7 +14,6 @@ export async function getWord(){
 export async function getDefinition(word){
   const response = await api.get(`/word/${word}`);
   let definition = response.data[0].xml.split("<def>")[1].split("</def>")[0];
-  console.log(definition);
 
   if(definition.split("<cit")[1] !== undefined){
     definition = await definition.split("<cit")[1].split("</cit>")[0];

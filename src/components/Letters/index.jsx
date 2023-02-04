@@ -25,9 +25,9 @@ function Letters(){
     )
 
     if(isCorrect){
-      e.target.style.backgroundColor = 'green'
+      e.target.style.boxShadow ="2px 1000px 1px #1ca20b inset"
     }else{
-      e.target.style.backgroundColor = 'red'
+      e.target.style.boxShadow ="2px 1000px 1px #9e0707 inset" ;
       handleLives()
     }
 

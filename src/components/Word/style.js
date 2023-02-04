@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.span`
-  color: #61dafb;
+  color: #d1a436;
   font-size: 1.5rem;
   position: absolute;
-  bottom: 12rem;
+  bottom: 15rem;
   left: 50%;
   transform: translateX(-50%);
 `

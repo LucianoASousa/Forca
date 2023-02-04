@@ -16,11 +16,15 @@ export const Container = styled.div`
     height: 30px;
     width: 30px;
     text-align: center;
-    background-color: #282c34;
-    color: #61dafb;
+    border: none;
+    border-radius: 1px;
+    background-color: #d1a436;
+    text-shadow: 1px 1px 1px #fff;
+ 
     
     :disabled{
-      color: #282c34;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
     }
   }
 
@@ -34,3 +38,4 @@ export const Container = styled.div`
     }
   }
   `
+
